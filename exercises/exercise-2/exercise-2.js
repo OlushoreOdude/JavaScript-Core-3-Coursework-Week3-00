@@ -95,3 +95,13 @@ ${firstName} ${lastName}`);
 
 // could compress both into a funtion that takes arguments 
 // can destruncture with arrow funciton argument 
+/*
+exampe with with arrow funciton 
+hogwarts.filter(obj => {
+let {house: schoolHouse} = obj;
+  return schoolHouse === "Gryffindor";
+  }).forEach(({firstName, lastName, house: schoolHouse, pet, occupation}) => {
+
+console.log(`${firstName} ${lastName}`);
+})
+*/
