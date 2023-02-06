@@ -6,3 +6,25 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+function makeRecipt(arrObj){
+let total = 0;
+
+arrObj.forEach((obj, index) => {
+let { itemName: item, quantity: numb, unitPrice: price} = obj;
+  total += price;
+  if(index === 0){
+  console.log("QTY    ITEM   TOTAL");
+  }
+console.log(`${numb}      ${item}     ${price}`);
+ // if( index === order.length -1){
+  //}
+})
+
+console.log(`
+Total: ${total}`);
+}
+
+makeRecipt(order);
+
+// could calculate dynamic white space gap between item and price
