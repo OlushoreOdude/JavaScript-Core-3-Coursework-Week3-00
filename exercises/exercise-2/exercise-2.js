@@ -73,21 +73,24 @@ let hogwarts = [
 
 hogwarts.filter(obj => {
 let {house: schoolHouse} = obj;
-  return schoolHouse === obj["house"];
+  return schoolHouse === "Gryffindor";
   
 }).forEach(obj => {
 let {firstName, lastName, house: schoolHouse, pet, occupation} = obj;
 console.log(`${firstName} ${lastName}`);
 })
 
-//need to test 
+//need to test
+//tested
 hogwarts.filter(obj => {
-let {pet} = obj;
-  return pet === obj["pet"];
+let {pet, occupation} = obj;
+//console.log(!!pet && (occupation === "Teacher"));
+  return !!pet && (occupation === "Teacher");
   
 }).forEach(obj => {
 let {firstName, lastName, house: schoolHouse, pet, occupation} = obj;
-console.log(`${firstName} ${lastName}`);
+console.log(`
+${firstName} ${lastName}`);
 })
 
 // could compress both into a funtion that takes arguments 
