@@ -70,3 +70,25 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+hogwarts.filter(obj => {
+let {house: schoolHouse} = obj;
+  return schoolHouse === obj["house"];
+  
+}).forEach(obj => {
+let {firstName, lastName, house: schoolHouse, pet, occupation} = obj;
+console.log(`${firstName} ${lastName}`);
+})
+
+//need to test 
+hogwarts.filter(obj => {
+let {pet} = obj;
+  return pet === obj["pet"];
+  
+}).forEach(obj => {
+let {firstName, lastName, house: schoolHouse, pet, occupation} = obj;
+console.log(`${firstName} ${lastName}`);
+})
+
+// could compress both into a funtion that takes arguments 
+// can destruncture with arrow funciton argument 
